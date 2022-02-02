@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
@@ -21,8 +20,8 @@
     <TextArea fx:id="messageTextArea" GridPane.rowIndex="5" GridPane.columnIndex="5"
               style="-fx-background-color: #440941; -fx-text-fill: #440941"/>
     <Button onAction="#handleLoadMenu" text="Back" GridPane.rowIndex="6" GridPane.columnIndex="6" GridPane.columnSpan="1"
-            style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 18px"/>
+            style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 14px"/>
     <Button onAction="#handleSendMessage" text="Send" GridPane.rowIndex="6" GridPane.columnIndex="7"
-            GridPane.columnSpan="2" style="-fx-background-color: purple; -fx-text-fill: white; -fx-font-size: 18px"/>
+            GridPane.columnSpan="2" style="-fx-background-color: purple; -fx-text-fill: white; -fx-font-size: 14px"/>
 
 </GridPane>

@@ -1,14 +1,16 @@
 package com.socialapp.socialapp.controller;
-
 import com.socialapp.socialapp.model.User;
 import com.socialapp.socialapp.repository.DataManager;
 import com.socialapp.socialapp.service.UserService;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class ProfileController extends ViewController implements Initializable {
     public Label usernameLabel;
@@ -18,6 +20,10 @@ public class ProfileController extends ViewController implements Initializable {
     public Label aboutLabel;
     public Label createdAtLabel;
     public Label updatedAtLabel;
+
+    @FXML
+    ImageView myImageview;
+
 
     private UserService userService = new UserService();
 
@@ -34,6 +40,13 @@ public class ProfileController extends ViewController implements Initializable {
             aboutLabel.setText(user.getAbout());
             createdAtLabel.setText(user.getCreatedAt().toString());
             updatedAtLabel.setText(user.getUpdatedAt().toString());
+
+            String imagePath = "/view/stickers/"+ user.getId() +".png";
+            Image myImage = new Image(imagePath);
+            myImageview.setImage(myImage);
+            myImageview.setFitHeight(250);
+            myImageview.setFitWidth(250);
+
         } catch (Exception e) {
             showAlert("Profile load failed", e.getMessage(), AlertType.ERROR);
             e.printStackTrace();

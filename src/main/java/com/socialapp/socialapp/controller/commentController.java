@@ -42,7 +42,6 @@ public class commentController extends ViewController implements Initializable {
             if(commentList.getItems().isEmpty()){
                 showAlert("Oops!", "Nobody has commented this post yet, be the first one :)", Alert.AlertType.INFORMATION);
             }
-
         }catch(Exception e){
             e.printStackTrace();
             showAlert("Problem loading comments", e.getMessage(), Alert.AlertType.ERROR);
@@ -55,11 +54,8 @@ public class commentController extends ViewController implements Initializable {
             Integer postId = DataManager.getInstance().getPostId();
             Integer userId = DataManager.getInstance().getLoggedInUserId();
             User user = this.userService.getUserProfile(userId);
-
             userService.addComment(postId, userId,user.getName(),commentText.getText() );
-
             changeScene(actionEvent, "comments");
-
         }catch (Exception e){
             e.printStackTrace();
             showAlert("Comment is not added!", e.getMessage(), Alert.AlertType.ERROR);
@@ -75,7 +71,4 @@ public class commentController extends ViewController implements Initializable {
             showAlert("Problem with navigation", ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
-
-
-
 }

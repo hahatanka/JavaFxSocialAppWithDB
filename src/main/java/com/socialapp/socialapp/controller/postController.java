@@ -46,6 +46,4 @@ public class postController extends ViewController implements Initializable {
             showAlert("Problem with navigation", ex.getMessage(), Alert.AlertType.ERROR);
         }
     }
-
-
 }

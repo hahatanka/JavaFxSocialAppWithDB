@@ -15,11 +15,6 @@ public class Post {
         this.createdAt = createdAt;
     }
 
-//    public Post( Timestamp createdAt,String username, String postText) {
-//        this.username = username;
-//        this.postText = postText;
-//        this.createdAt = createdAt;
-//    }
 
     public int getPost_id() {
         return post_id;

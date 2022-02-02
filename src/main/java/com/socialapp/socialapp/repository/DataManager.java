@@ -13,6 +13,7 @@ public class DataManager {
     private Integer friendId = null;
     private Integer postId= null;
 
+
     public static DataManager getInstance(){
         if(dataManager_instance == null) dataManager_instance = new DataManager();
         return dataManager_instance;

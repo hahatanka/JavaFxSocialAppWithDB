@@ -8,18 +8,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import org.w3c.dom.Text;
-
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.ResourceBundle;
-import java.util.StringJoiner;
 
 public class messageController extends ViewController implements Initializable {
     public TextArea messageTextArea;
-    public TextArea chatText;
     UserService userService = new UserService();
     public ListView<String> listView = new ListView<>();
 
@@ -29,16 +23,10 @@ public class messageController extends ViewController implements Initializable {
     Integer friendId = DataManager.getInstance().getFriendId();
     try {
         userService.createChatTable();
-
-//        StringJoiner joiner = new StringJoiner(System.lineSeparator());
         for(String message: userService.viewChat(friendId,userId)) {
             listView.getItems().add(message);
-//            joiner.add(message);
             }
-//        chatText.setText(joiner.toString());
-//        chatText.setEditable(false);
-
-    } catch (SQLException e) {
+        } catch (SQLException e) {
         e.printStackTrace();
     }
 }

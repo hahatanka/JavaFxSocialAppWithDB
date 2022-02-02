@@ -16,7 +16,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="SocialApp" options="--add-exports java.datatransfer/java.awt=com.socialapp.socialapp" />
+      <module name="SocialApp" options="" />
     </option>
   </component>
 </project>

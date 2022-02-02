@@ -1,6 +1,4 @@
 package com.socialapp.socialapp.controller;
-
-
 import com.socialapp.socialapp.service.UserService;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
@@ -8,8 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
-//import java.awt.*;
 
 public class RegisterController extends ViewController{
     public TextField nameField;
@@ -22,7 +18,6 @@ public class RegisterController extends ViewController{
     public Label notificationLabel;
 
     private UserService userService = new UserService();
-
 
     public void handleRegistration(ActionEvent actionEvent){
         /// interact with db

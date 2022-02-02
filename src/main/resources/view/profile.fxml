@@ -1,41 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
-
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
-<GridPane xmlns="http://javafx.com/javafx"
-          fx:controller="com.socialapp.socialapp.controller.ProfileController"
-          xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
-          hgap="10" vgap="10">
+<?import javafx.scene.image.ImageView?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            fx:controller="com.socialapp.socialapp.controller.ProfileController"
+            xmlns:fx="http://javafx.com/fxml" prefHeight="500"
+            prefWidth="500">
 
-    <Text text="Welcome to profile page" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+    <Text text="Welcome to profile page" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="120"
           style="-fx-font-size: 20px; -fx-text-fill: purple"/>
 
-    <Label text="User Name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-    <Label fx:id="usernameLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="User Name" AnchorPane.topAnchor="280" AnchorPane.leftAnchor="120"
+           style=" -fx-text-fill: black; -fx-font-size: 16px" />
+    <Label fx:id="usernameLabel" AnchorPane.topAnchor="280" AnchorPane.leftAnchor="260"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
 
-    <Label text="Email Address" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-    <Label fx:id="emailAddressLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Label text="Email Address" AnchorPane.topAnchor="300" AnchorPane.leftAnchor="120"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
+    <Label fx:id="emailAddressLabel" AnchorPane.topAnchor="300" AnchorPane.leftAnchor="260"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
 
-    <Label text="About" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
-    <Label fx:id="aboutLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <Label text="About" AnchorPane.topAnchor="320" AnchorPane.leftAnchor="120"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
+    <Label fx:id="aboutLabel" AnchorPane.topAnchor="320" AnchorPane.leftAnchor="260"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
 
-    <Label text="Name" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
-    <Label fx:id="nameLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <Label text="Name" AnchorPane.topAnchor="340" AnchorPane.leftAnchor="120"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
+    <Label fx:id="nameLabel" AnchorPane.topAnchor="340" AnchorPane.leftAnchor="260"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
 
-    <Label text="Member since" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
-    <Label fx:id="createdAtLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    <Label text="Member since" AnchorPane.topAnchor="360" AnchorPane.leftAnchor="120"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
+    <Label fx:id="createdAtLabel" AnchorPane.topAnchor="360" AnchorPane.leftAnchor="260"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
 
-    <Label text="Last changed" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
-    <Label fx:id="updatedAtLabel" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    <Label text="Last changed" AnchorPane.topAnchor="380" AnchorPane.leftAnchor="120"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
+    <Label fx:id="updatedAtLabel" AnchorPane.topAnchor="380" AnchorPane.leftAnchor="260"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
 
-    <Label text="Location" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
-    <Label fx:id="locationLabel" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+    <Label text="Location" AnchorPane.topAnchor="400" AnchorPane.leftAnchor="120"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
+    <Label fx:id="locationLabel" AnchorPane.topAnchor="400" AnchorPane.leftAnchor="260"
+           style=" -fx-text-fill: black; -fx-font-size: 16px"/>
 
-    <Button onAction="#handleLoadMenu" text="Back" GridPane.rowIndex="8" GridPane.columnIndex="6"
-            GridPane.columnSpan="2" style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 14px"/>
-    <Button onAction="#handleEdit" text="Edit" GridPane.rowIndex="8" GridPane.columnIndex="8"
-            GridPane.columnSpan="2" style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 14px"/>
-</GridPane>
+    <ImageView fx:id="myImageview" AnchorPane.topAnchor="240" AnchorPane.rightAnchor="120"/>
+
+    <Button onAction="#handleLoadMenu" text="Back" AnchorPane.topAnchor="480" AnchorPane.leftAnchor="120"
+             style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 14px"/>
+    <Button onAction="#handleEdit" text="Edit" AnchorPane.topAnchor="480" AnchorPane.leftAnchor="200"
+            style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 14px"/>
+</AnchorPane>

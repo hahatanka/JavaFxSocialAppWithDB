@@ -214,21 +214,6 @@ public class UserService {
 
   }
 
-  public ArrayList<String> viewFeedText() throws SQLException {
-    connection = DBManager.getConnection();
-    String query ="SELECT post_id, createdAt, username, post FROM feed_text;";
-
-    PreparedStatement statement = connection.prepareStatement(query);
-    ArrayList<String> postList = new ArrayList<>();
-    ResultSet result = statement.executeQuery();
-    while (result.next()) {
-      String post = result.getString("post_id")+ "@"+ result.getTimestamp("createdAt")+"----"+ result.getString("username")+": "+result.getString("post");
-      postList.add(post);
-    }
-    return postList;
-  }
-
-
   public ArrayList<Post> getListOfPosts() throws SQLException {
     connection = DBManager.getConnection();
     String query = "SELECT * FROM feed_text";
