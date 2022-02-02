@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<GridPane xmlns="http://javafx.com/javafx"
+          fx:controller="com.socialapp.socialapp.controller.FriendProfileController"
+          xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+          hgap="10" vgap="10">
+
+    <Text text="Welcome to profile page" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+          style="-fx-font-size: 20px; -fx-text-fill: purple"/>
+
+    <Label text="User Name" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Label fx:id="usernameLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Email Address" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Label fx:id="emailAddressLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="About" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Label fx:id="aboutLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="Name" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <Label fx:id="nameLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Label text="Member since" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <Label fx:id="createdAtLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    <Label text="Last changed" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <Label fx:id="updatedAtLabel" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <Label text="Location" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <Label fx:id="locationLabel" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+    <Button onAction="#handleLoadMenu" text="Back" GridPane.rowIndex="8" GridPane.columnIndex="6"
+            GridPane.columnSpan="2" style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 14px"/>
+</GridPane>

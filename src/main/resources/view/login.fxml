@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<GridPane fx:controller="com.socialapp.socialapp.controller.LoginController"
+          xmlns="http://javafx.com/javafx"
+  xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+  hgap="10" vgap="10">
+  <Text text="Welcome to login page" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+  <Label text="Enter your username" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+  <TextField fx:id="usernameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+  <Label text="Enter your password" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+  <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+  <!-- this is a commit-->
+  <Button text="Register" GridPane.rowIndex="3" GridPane.columnIndex="0" onAction="#handleLoadRegister"
+    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: #440941"/>
+  <Button text="Login" GridPane.rowIndex="3" GridPane.columnIndex="1" onAction="#handleUserLogin"
+    style="-fx-font-size: 14px; -fx-text-fill: white; -fx-background-color: purple"/>
+
+  <Label fx:id="notificationLabel" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+</GridPane>
