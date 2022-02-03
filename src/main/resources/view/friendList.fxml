@@ -9,11 +9,11 @@
             xmlns:fx="http://javafx.com/fxml" prefHeight="500"
             prefWidth="500">
 
-    <Label text="Your Friends" AnchorPane.topAnchor="80" AnchorPane.rightAnchor="210"
+    <Label text="Your Friends" AnchorPane.topAnchor="80" AnchorPane.rightAnchor="230"
 style=" -fx-text-fill: purple; -fx-font-size: 28px"/>
     <ListView fx:id="listView" AnchorPane.topAnchor="200" AnchorPane.rightAnchor="80" maxHeight="200"
               style="-fx-background-color: #440941; -fx-selection-bar:#440941; -fx-text-fill: white; -fx-font-size: 14px"/>
-    <ImageView fx:id="myImageview" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="50"/>
+    <ImageView fx:id="myImageview" AnchorPane.topAnchor="150" AnchorPane.leftAnchor="30"/>
     <Button onAction="#handleMessenger" text="Open Messenger" AnchorPane.bottomAnchor="50" AnchorPane.rightAnchor="80"
      style="-fx-background-color: #440941; -fx-text-fill: white; -fx-font-size: 14px"/>
     <Button onAction="#handleViewProfile" text="View Profile" AnchorPane.bottomAnchor="50" AnchorPane.rightAnchor="220"

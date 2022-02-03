@@ -75,7 +75,7 @@ public class Friends extends ViewController implements Initializable {
         for (User user : this.friends) {
             if (user.getName().equals(name)) {
                 DataManager.getInstance().setFriendId(user.getId());
-                changeScene(actionEvent, "friendProfile");
+                changeSceneSmall(actionEvent, "friendProfile");
             }
         }
     }

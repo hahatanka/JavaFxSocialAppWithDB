@@ -15,7 +15,7 @@
     <Label text="Original post:" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="200" AnchorPane.rightAnchor="100"
            style=" -fx-text-fill: #440941; -fx-font-size: 17px"/>
     <Text fx:id="postText" AnchorPane.topAnchor="130" AnchorPane.leftAnchor="180" AnchorPane.rightAnchor="180"
-          style=" -fx-text-fill: #440941; -fx-font-weight: italic;-fx-font-size: 20px"/>
+          style=" -fx-text-fill: #440941;-fx-font-size: 20px"/>
     <ListView fx:id="commentList" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="100" AnchorPane.rightAnchor="100" maxHeight="200" maxWidth="300"
               style="-fx-background-color: #440941; -fx-selection-bar:#440941; -fx-text-fill: #440941; -fx-font-size: 14px"/>
     <TextArea fx:id="commentText" AnchorPane.topAnchor="450" AnchorPane.rightAnchor="150" AnchorPane.leftAnchor="150"

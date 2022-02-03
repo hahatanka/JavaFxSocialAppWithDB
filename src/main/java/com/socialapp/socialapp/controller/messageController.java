@@ -49,7 +49,7 @@ public class messageController extends ViewController implements Initializable {
         try {
             Integer userId = DataManager.getInstance().getLoggedInUserId();
             DataManager.getInstance().setLoggedInUserId(userId);
-            changeScene(actionEvent, "menu");
+            changeSceneSmall(actionEvent, "friendList");
         }catch (Exception ex){
             showAlert("Problem with navigation", ex.getMessage(), Alert.AlertType.ERROR);
         }
