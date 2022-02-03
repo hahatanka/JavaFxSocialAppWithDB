@@ -2,6 +2,9 @@ package com.socialapp.socialapp.controller;
 import com.socialapp.socialapp.model.User;
 import com.socialapp.socialapp.repository.DataManager;
 import com.socialapp.socialapp.service.UserService;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -22,7 +25,8 @@ public class Friends extends ViewController implements Initializable {
     public ListView<String> listView = new ListView<>();
     private UserService userService = new UserService();
     public ArrayList<User> friends;
-   public User user;
+
+
     @FXML
     ImageView myImageview;
 
@@ -30,28 +34,22 @@ public class Friends extends ViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             Integer userId = DataManager.getInstance().getLoggedInUserId();
-            System.out.println(userId);
             friends = this.userService.getListOfFriends(userId);
             for (User user : friends) {
                 String name = user.getName();
                 listView.getItems().add(name);
-            }
-            listView.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent mouseEvent) {
-                    String imagePath = "/view/stickers/"+ user.getId() +".png";
-                    Image myImage = new Image(imagePath);
-                    myImageview.setImage(myImage);
-                    myImageview.setFitHeight(250);
-                    myImageview.setFitWidth(250);
                 }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
+            String imagePath = "/view/stickers/8.png";
+            System.out.println(imagePath);
+            Image myImage = new Image(getClass()
+                    .getResourceAsStream(imagePath));
+            myImageview.setImage(myImage);
+            myImageview.setFitHeight(250);
+            myImageview.setFitWidth(250);
+            } catch(Exception e){
+                e.printStackTrace();
+            }
         }
-    }
-
-
 
     public void handleMessenger(ActionEvent actionEvent) throws IOException, SQLException {
         Integer userId = DataManager.getInstance().getLoggedInUserId();

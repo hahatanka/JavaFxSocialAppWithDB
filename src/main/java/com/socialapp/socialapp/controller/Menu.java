@@ -41,9 +41,9 @@ public class Menu extends ViewController implements Initializable {
                     }
                 }
 
-                String imagePath = "/view/stickers/3.png"; ///view/stickers/"+ user.getId() +".png"
-                System.out.println(imagePath);
-                Image myImage = new Image(imagePath);
+                String imagePath = "/view/stickers/"+ user.getId() +".png";
+                Image myImage = new Image(getClass()
+                        .getResourceAsStream(imagePath));
                 myImageview.setImage(myImage);
                 myImageview.setFitHeight(250);
                 myImageview.setFitWidth(250);

@@ -42,7 +42,8 @@ public class ProfileController extends ViewController implements Initializable {
             updatedAtLabel.setText(user.getUpdatedAt().toString());
 
             String imagePath = "/view/stickers/"+ user.getId() +".png";
-            Image myImage = new Image(imagePath);
+            Image myImage = new Image(getClass()
+                    .getResourceAsStream(imagePath));
             myImageview.setImage(myImage);
             myImageview.setFitHeight(250);
             myImageview.setFitWidth(250);
